@@ -91,7 +91,7 @@ float HabitosDeConsumo(){
 
     printf("\n6. ¿Cual es el consumo en su hogar (en metros cúbicos) de agua al mes?\n");
     scanf("%f", &dato_de_entrada);
-    emision += (dato_de_entrada * 0.708 * 12 / 4);
+    emision += (dato_de_entrada * 0.708 * 12 / numeroPersonasHogar);
 
     return emision;
 
