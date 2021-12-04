@@ -1,7 +1,9 @@
 #include <stdio.h>
 
+// Número de personas del hogar del usuario.
 int numeroPersonasHogar;
 
+// Mensaje de Bienvenida y explicación breve del programa.
 void MensajeDeBienvenida(){
 
     printf(" -------------------------------------------\n");
@@ -12,6 +14,7 @@ void MensajeDeBienvenida(){
 
 }
 
+// Eje 1: Energía en el hogar.
 float EnergiaEnElHogar(){
 
     printf("\n ----------------------------\n");
@@ -39,6 +42,7 @@ float EnergiaEnElHogar(){
 
 }
 
+// Eje 2: Energía en el transporte.
 float EnergiaEnElTransporte(){
 
     printf("\n ---------------------------------\n");
@@ -60,6 +64,7 @@ float EnergiaEnElTransporte(){
 
 }
 
+// Eje 3: Hábitos de consumo.
 float HabitosDeConsumo(){
 
     printf("\n ---------------------------\n");
@@ -97,28 +102,39 @@ float HabitosDeConsumo(){
 
 }
 
-
+// Sección principal del programa.
 int main(){
 
-    // Inicialización de variables
+    // Emisiones de CO2 en total al año.
     float emisionTotalAnual;
+
+    // Emisión total en el eje 1.
     float emisionHogar;
+
+    // Emisión total en el eje 2.
     float emisionTransporte;
+
+    // Emisión total en el eje 3.
     float emisionHabitos;
-    
 
     MensajeDeBienvenida();
 
-
+    // Se inicializa la emisión total en 0.
     emisionTotalAnual = 0;
 
+    // Se pregunta al usuario cuántas personas componen su hogar.
     printf("\n¿Cuantas personas viven en su hogar?\n");
     scanf("%d", &numeroPersonasHogar);
+    while(numeroPersonasHogar < 1){
+        printf("\nPor favor, ingrese una cantidad valida...\n");
+        scanf("%d", &numeroPersonasHogar);
+    }
 
     emisionHogar = EnergiaEnElHogar();
     emisionTransporte = EnergiaEnElTransporte();
     emisionHabitos = HabitosDeConsumo();
 
+    // Se suman las emisiones de los tres ejes.
     emisionTotalAnual = emisionHogar + emisionTransporte + emisionHabitos;
     
     printf("\nEmisiones en el eje \"Energia en el hogar\": %f (kgCO2eq)\n", emisionHogar);
@@ -126,11 +142,22 @@ int main(){
     printf("\nEmisiones en el eje \"Habitos de consumo\": %f (kgCO2eq)\n", emisionHabitos);
     printf("\nEmisiones en Total: %f (kgCO2eq)\n", emisionTotalAnual);
 
-    if(emisionTotalAnual < 5000){
-        
+    /* Si las emisiones totales no superan el promedio nacional, se le motiva al usuario a que se mantenga
+       en los niveles. Por el contrario, si supera el promedio nacional, se le recomienda una serie de
+       actividades que el usuario puede realizar para contribuir a la disminución de emisiones. */
+    if(emisionTotalAnual < 4600){
+        printf("\nFELICITACIONES !\n");
+        printf("Sus niveles de emisiones de CO2 estan bajo el promedio nacional.\n");
+        printf("Mantenga sus niveles de emision.\n");
     }else{
-
-        // Recomendaciones para disminuir las emisiones
+        printf("\nMALAS NOTICIAS !\n");
+        printf("Sus niveles de emisiones de CO2 sobrepasan el promedio nacional.\n");
+        printf("Es por eso que le entregamos las siguientes recomendaciones:\n");
+        printf("1.\n");
+        printf("2.\n");
+        printf("3.\n");
+        printf("4.\n");
+        printf("5.\n");
     }
 
 
