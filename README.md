@@ -27,7 +27,7 @@ En caso de ejecutar via consola: nos hubicamos en la carpeta donde tenemos el ar
 
 ## Datos Entrada
 
-### El proyecto te solicitara los siguientes datos:
+### El proyecto te solicitara los siguientes datos:,
 
 1. Consumo de electricidad en su hogar por mes (kWh)
 
