@@ -1,5 +1,5 @@
 # Calculadora de huella de carbono personal
-Calculadora de huella de carbono personal
+    Calculadora de huella de carbono personal para el ramo Fundamentos de Termodinamica 2S 2021 de la PUCV
 <h1 align="center"><Calculadora de huella de carbono personal></h1>
 
 <p align="center"><Calculadora de huella de carbono personal para el ramo Fundamentos de Termodinamica 2S 2021 de la PUCV></p>
