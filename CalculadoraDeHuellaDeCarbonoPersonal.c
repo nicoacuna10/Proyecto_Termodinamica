@@ -6,17 +6,23 @@ int numeroPersonasHogar;
 // Mensaje de Bienvenida y explicación breve del programa.
 void MensajeDeBienvenida(){
 
-    printf(" -------------------------------------------\n");
-    printf("| CALCULADORA DE HUELLA DE CARBONO PERSONAL |\n");
-    printf(" -------------------------------------------\n");
+    printf("\n************************************************************************************************************************************************************************************************************\n");
+    
+    printf("                                                                     -------------------------------------------\n");
+    printf("                                                                    | CALCULADORA DE HUELLA DE CARBONO PERSONAL |\n");
+    printf("                                                                     -------------------------------------------\n");
 
     // Mensaje
-
+    printf("\nBienvenid@ al programa de Calculadora de Huella de Carbono Personal.\n");
+    printf("Con esta calculadora podras saber si tus emisiones familiares/hogareñas de CO2 se ajustan al promedio nacional o lo sobrepasan. Ten en cuenta que necesitaras los siguientes datos:\n");
+    printf("Consumo de electricidad, consumo de gas (natural/licuado), uso del auto, uso de aviones y habitos de consumo alimenticio como: KG de carnes rojas y blancas, consumo de huevos y leche. Todo esto para calcular tu huella de carbono. \n");
+    
+    printf("\n************************************************************************************************************************************************************************************************************\n");
 }
 
 // Eje 1: Energía en el hogar.
 float EnergiaEnElHogar(){
-
+    printf("\n************************************************************************************************************************************************************************************************************\n");
     printf("\n ----------------------------\n");
     printf("| Eje 1: Energia en el hogar |\n");
     printf(" ----------------------------\n");
@@ -44,7 +50,7 @@ float EnergiaEnElHogar(){
 
 // Eje 2: Energía en el transporte.
 float EnergiaEnElTransporte(){
-
+    printf("\n************************************************************************************************************************************************************************************************************\n");
     printf("\n ---------------------------------\n");
     printf("| Eje 2: Energia en el transporte |\n");
     printf(" ---------------------------------\n");
@@ -66,7 +72,7 @@ float EnergiaEnElTransporte(){
 
 // Eje 3: Hábitos de consumo.
 float HabitosDeConsumo(){
-
+    printf("\n************************************************************************************************************************************************************************************************************\n");
     printf("\n ---------------------------\n");
     printf("| Eje 3: Habitos de consumo |\n");
     printf(" ---------------------------\n");
@@ -136,12 +142,17 @@ int main(){
 
     // Se suman las emisiones de los tres ejes.
     emisionTotalAnual = emisionHogar + emisionTransporte + emisionHabitos;
-    
+    printf("\n************************************************************************************************************************************************************************************************************\n");
+    printf("\n-----------------------------\n");
+    printf("| Emisiones totales por eje: |");
+    printf("\n-----------------------------\n");
+
+    // Se imprime el resultado.
     printf("\nEmisiones en el eje \"Energia en el hogar\": %f (kgCO2eq)\n", emisionHogar);
     printf("\nEmisiones en el eje \"Energia en el transporte\": %f (kgCO2eq)\n", emisionTransporte);
     printf("\nEmisiones en el eje \"Habitos de consumo\": %f (kgCO2eq)\n", emisionHabitos);
     printf("\nEmisiones en Total: %f (kgCO2eq)\n", emisionTotalAnual);
-
+    printf("\n************************************************************************************************************************************************************************************************************\n");
     /* Si las emisiones totales no superan el promedio nacional, se le motiva al usuario a que se mantenga
        en los niveles. Por el contrario, si supera el promedio nacional, se le recomienda una serie de
        actividades que el usuario puede realizar para contribuir a la disminución de emisiones. */
@@ -150,14 +161,19 @@ int main(){
         printf("Sus niveles de emisiones de CO2 estan bajo el promedio nacional.\n");
         printf("Mantenga sus niveles de emision.\n");
     }else{
-        printf("\nMALAS NOTICIAS !\n");
-        printf("Sus niveles de emisiones de CO2 sobrepasan el promedio nacional.\n");
-        printf("Es por eso que le entregamos las siguientes recomendaciones:\n");
-        printf("1.\n");
-        printf("2.\n");
-        printf("3.\n");
-        printf("4.\n");
-        printf("5.\n");
+        printf("\n ----------------------------------------------------------------\n");
+        printf("|                       MALAS NOTICIAS !                          |\n");
+        printf("| Sus niveles de emisiones de CO2 sobrepasan el promedio nacional |\n");
+        printf("| Es por eso que le entregamos las siguientes recomendaciones:    |\n");
+        printf(" ----------------------------------------------------------------\n");
+        printf("\n************************************************************************************************************************************************************************************************************\n");
+        printf("\n1. Utilice medios de transporte menos contaminantes que un auto particular, como por ejemplo el uso de transporte publico, o medios de transporte de emision 0, como la bicicleta, 1 o 2 veces a la semana.\n");
+        printf("\n2. Reemplaze las carnes por alimentos vegetales. La OMS recomienda entre 200-500 gramos SEMANALES de consumo de carnes, no es algo escencial de la dieta humana\n");
+        printf("\n3. Reduzca su uso de agua potable. Hay localidades de Chile que viven con 100 Litros de agua diarios, reducir nuestro consumo en duchas, lavado de manos, riego, etc. es nuestra obligacion \n   no solo por la huella de carbono, si no por la sequia y la necesidad de adaptarse a nuevos tiempos.\n");
+        printf("\n4. Si no esta utilizando los artefactos electricos, desconectelos de la corriente. Si bien, el gasto energetico cuando no estan en uso es minimo, aun asi existe un gasto que no se esta aprovechando, y suma\n   a los kW de fin de mes, y finalmente a la huella de carbono personal.\n");
+        printf("\n5. Planta flora nativa. Idealmente arboles, ya que al ser nativos su consumo de agua esta adaptado para el ambiente en el que viviran, y te ayudaran, a largo plazo, a reducir el CO2 del ambiente.\n");
+        printf("\n6. Recuerda las 3 R: Reduce, Reutiliza y Recicla. Informate de los puntos de reciclaje cercanos a tu hogar, y comienza a separar tu basura. Es un acto minimo, pero a largo plazo el impacto sera significativo\n    (y de paso, te daras cuenta lo impresionante de la cantidad de basura que desechas y estara degradandose y contaminando el suelo por incluso mas tiempo que el que viviras tu).\n");
+        printf("\n***************************************************************************************************************************************************************************************************************\n");
     }
 
 
