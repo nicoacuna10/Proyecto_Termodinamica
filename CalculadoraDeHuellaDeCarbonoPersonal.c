@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// LINEA DE COMANDO: gcc CalculadoraDeHuellaDeCarbonoPersonal.c -o main
+
 // Número de personas del hogar del usuario.
 int numeroPersonasHogar;
 
@@ -143,9 +145,9 @@ int main(){
     // Se suman las emisiones de los tres ejes.
     emisionTotalAnual = emisionHogar + emisionTransporte + emisionHabitos;
     printf("\n************************************************************************************************************************************************************************************************************\n");
-    printf("\n-----------------------------\n");
-    printf("| Emisiones totales por eje: |");
-    printf("\n-----------------------------\n");
+    printf("\n ------------------------------------\n");
+    printf("| Emisiones anuales totales por eje: |");
+    printf("\n ------------------------------------\n");
 
     // Se imprime el resultado.
     printf("\nEmisiones en el eje \"Energia en el hogar\": %f (kgCO2eq)\n", emisionHogar);
@@ -168,7 +170,7 @@ int main(){
         printf(" ----------------------------------------------------------------\n");
         printf("\n************************************************************************************************************************************************************************************************************\n");
         printf("\n1. Utilice medios de transporte menos contaminantes que un auto particular, como por ejemplo el uso de transporte publico, o medios de transporte de emision 0, como la bicicleta, 1 o 2 veces a la semana.\n");
-        printf("\n2. Reemplaze las carnes por alimentos vegetales. La OMS recomienda entre 200-500 gramos SEMANALES de consumo de carnes, no es algo escencial de la dieta humana\n");
+        printf("\n2. Reemplace las carnes por alimentos vegetales. La OMS recomienda entre 200-500 gramos SEMANALES de consumo de carnes, no es algo escencial de la dieta humana\n");
         printf("\n3. Reduzca su uso de agua potable. Hay localidades de Chile que viven con 100 Litros de agua diarios, reducir nuestro consumo en duchas, lavado de manos, riego, etc. es nuestra obligacion \n   no solo por la huella de carbono, si no por la sequia y la necesidad de adaptarse a nuevos tiempos.\n");
         printf("\n4. Si no esta utilizando los artefactos electricos, desconectelos de la corriente. Si bien, el gasto energetico cuando no estan en uso es minimo, aun asi existe un gasto que no se esta aprovechando, y suma\n   a los kW de fin de mes, y finalmente a la huella de carbono personal.\n");
         printf("\n5. Planta flora nativa. Idealmente arboles, ya que al ser nativos su consumo de agua esta adaptado para el ambiente en el que viviran, y te ayudaran, a largo plazo, a reducir el CO2 del ambiente.\n");
