@@ -16,7 +16,7 @@ void MensajeDeBienvenida(){
 
     // Mensaje
     printf("\nBienvenid@ al programa de Calculadora de Huella de Carbono Personal.\n");
-    printf("Con esta calculadora podras saber si tus emisiones familiares/hogareñas de CO2 se ajustan al promedio nacional o lo sobrepasan. Ten en cuenta que necesitaras los siguientes datos:\n");
+    printf("Con esta calculadora podras saber si tus emisiones familiares/hogare%cas de CO2 se ajustan al promedio nacional o lo sobrepasan. Ten en cuenta que necesitaras los siguientes datos:\n",164);
     printf("Consumo de electricidad, consumo de gas (natural/licuado), uso del auto, uso de aviones y habitos de consumo alimenticio como: KG de carnes rojas y blancas, consumo de huevos y leche. Todo esto para calcular tu huella de carbono. \n");
     
     printf("\n************************************************************************************************************************************************************************************************************\n");
@@ -32,15 +32,15 @@ float EnergiaEnElHogar(){
     float emision = 0;
     float dato_de_entrada;
 
-    printf("\n1. ¿Cuanto es el consumo en su hogar (en kWh) de electricidad al mes?\n");
+    printf("\n1. %cCuanto es el consumo en su hogar (en kWh) de electricidad al mes?\n",168);
     scanf("%f", &dato_de_entrada);
     emision += (dato_de_entrada * 0.4195 * 12);
 
-    printf("\n2. ¿Cuanto es el consumo en su hogar (en metros cúbicos) de gas natural al mes?\n");
+    printf("\n2. %cCuanto es el consumo en su hogar (en metros cubicos) de gas natural al mes?\n",168);
     scanf("%f", &dato_de_entrada);
     emision += (dato_de_entrada * 2.097 * 12);
 
-    printf("\n3. ¿Cuanto es el consumo en su hogar (en kilogramos) de gas licuado al mes?\n");
+    printf("\n3. %cCuanto es el consumo en su hogar (en kilogramos) de gas licuado al mes?\n",168);
     scanf("%f", &dato_de_entrada);
     emision += (dato_de_entrada * 2.957 * 12);
 
@@ -60,11 +60,11 @@ float EnergiaEnElTransporte(){
     float emision = 0;
     float dato_de_entrada;
 
-    printf("\n1. ¿Cuantos kilometros recorre en auto al mes?\n");
+    printf("\n1. %cCuantos kilometros recorre en auto al mes?\n",168);
     scanf("%f", &dato_de_entrada);
     emision += (dato_de_entrada * 0.18568 * 12);
 
-    printf("\n2. Si viaja en avión ¿Cuantos kilometros recorre al año?\n");
+    printf("\n2. Si viaja en avion %cCuantos kilometros recorre al a%co?\n",168,164);
     scanf("%f", &dato_de_entrada);
     emision += (dato_de_entrada * 0.285);
 
@@ -82,27 +82,27 @@ float HabitosDeConsumo(){
     float emision = 0;
     float dato_de_entrada;
 
-    printf("\n1. ¿Cuantos kilogramos de carne de vacuno consume a la semana?\n");
+    printf("\n1. %cCuantos kilogramos de carne de vacuno consume a la semana?\n",168);
     scanf("%f", &dato_de_entrada);
     emision += (dato_de_entrada * 26.5 * 52);
 
-    printf("\n2. ¿Cuantos kilogramos de carne de cerdo consume a la semana?\n");
+    printf("\n2. %cCuantos kilogramos de carne de cerdo consume a la semana?\n",168);
     scanf("%f", &dato_de_entrada);
     emision += (dato_de_entrada * 1.5 * 52);
 
-    printf("\n3. ¿Cuantos kilogramos de carne de ave consume a la semana?\n");
+    printf("\n3. %cCuantos kilogramos de carne de ave consume a la semana?\n",168);
     scanf("%f", &dato_de_entrada);
     emision += (dato_de_entrada * 0.6 * 52);
 
-    printf("\n4. ¿Cuantos litros de leche consume a la semana?\n");
+    printf("\n4. %cCuantos litros de leche consume a la semana?\n",168);
     scanf("%f", &dato_de_entrada);
     emision += (dato_de_entrada * 0.874 * 52);
 
-    printf("\n5. ¿Cuantos huevos consume a la semana?\n");
+    printf("\n5. %cCuantos huevos consume a la semana?\n",168);
     scanf("%f", &dato_de_entrada);
     emision += (dato_de_entrada * 0.04 * 52);
 
-    printf("\n6. ¿Cual es el consumo en su hogar (en metros cúbicos) de agua al mes?\n");
+    printf("\n6. %cCual es el consumo en su hogar (en metros cubicos) de agua al mes?\n",168);
     scanf("%f", &dato_de_entrada);
     emision += (dato_de_entrada * 0.708 * 12 / numeroPersonasHogar);
 
@@ -131,7 +131,7 @@ int main(){
     emisionTotalAnual = 0;
 
     // Se pregunta al usuario cuántas personas componen su hogar.
-    printf("\n¿Cuantas personas viven en su hogar?\n");
+    printf("\n%cCuantas personas viven en su hogar?\n",168);
     scanf("%d", &numeroPersonasHogar);
     while(numeroPersonasHogar < 1){
         printf("\nPor favor, ingrese una cantidad valida...\n");
